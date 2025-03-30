@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Test Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <div class="welcome-content">
+                <div class="brain-icon">🧠</div>
+                <h1>IQ Test Challenge</h1>
+                <p>Test your intelligence with our comprehensive IQ assessment. The test consists of questions covering logical, verbal, numerical, and spatial reasoning.</p>
+                <button onclick="startTest()" class="start-btn">Start Test</button>
+            </div>
+        </div>
+
+        <!-- Test Screen -->
+        <div id="test-screen" class="screen hidden">
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen hidden">
+            <div class="results-content">
+                <div class="brain-icon">🧠</div>
+                <h2>Your IQ Score: <span id="iq-score"></span></h2>
+                <p>You answered <span id="correct-answers"></span> out of <span id="total-questions"></span> questions correctly</p>
+                <button onclick="retakeTest()" class="retake-btn">Take Test Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
